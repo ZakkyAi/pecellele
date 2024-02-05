@@ -1,5 +1,3 @@
-<!-- git -->
-
 <?php
 require 'koneksi.php';
 
