@@ -29,6 +29,10 @@ $result = $conn->query($sql);
         <a href="dashboard.php" class="w3-bar-item w3-button">Produk</a>
         <a href="kategori.php" class="w3-bar-item w3-button">Kategori</a>
         <a href="tambah.php" class="w3-bar-item w3-button">Tambah Produk</a>
+        <a href="inbox.php" class="w3-bar-item w3-button">Inbox</a>
+        <a href="keranjangpenjual.php" class="w3-bar-item w3-button">Pesanan</a>
+        <a href="log_bayar.php" class="w3-bar-item w3-button">log pesanan</a>
+        <a href="pembayaran.php" class="w3-bar-item w3-button">pembayaran</a>
         <a href="logout.php" class="w3-bar-item w3-button">logout</a>
     </div>
 

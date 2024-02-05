@@ -24,7 +24,7 @@ include 'koneksi.php';
         <a href="inbox.php" class="w3-bar-item w3-button">Inbox</a>
         <a href="keranjangpenjual.php" class="w3-bar-item w3-button">Pesanan</a>
         <a href="log_bayar.php" class="w3-bar-item w3-button">log pesanan</a>
-        
+        <a href="pembayaran.php" class="w3-bar-item w3-button">pembayaran</a>
         <a href="logout.php" class="w3-bar-item w3-button">Logout</a>
         
         
