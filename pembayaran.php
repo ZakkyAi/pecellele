@@ -58,6 +58,7 @@ include 'koneksi.php';
             echo "<p class='card-text'>Alamat: " . $row["alamat"] . "</p>";
             echo "<p class='card-text'>Yang Dipesan: " . $row["ygdipesan"] . "</p>";
             echo "<p class='card-text'>Jumlah Bayar: " . $row["jumlah_bayar"] . "</p>";
+            echo "<a href='delete_pembayaran.php?id=" . $row['id_pembayar'] . "' class='btn btn-danger' onclick='return confirm(\"Yakin ingin menghapus produk ini?\")'>Delete</a>";
 
             // Display image from the "gambar" folder
             $gambarPath = "gambar/" . $row["gambar"];
