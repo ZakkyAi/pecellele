@@ -58,7 +58,7 @@ include 'koneksi.php';
 
             echo "</tbody></table>";
         } else {
-            echo "0 results";
+            echo "Tidak ada pesanan saat ini";
         }
 
         // Close the connection

@@ -11,36 +11,6 @@ include 'koneksi.php';
     <title>Data Display</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        .btn {
-            margin-right: 5px;
-        }
-
-        .table-container {
-            max-width: 700px;
-        }
-
-        .table th,
-        .table td {
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        /* Custom styling for the table */
-        .table-container table {
-            width: 100%;
-        }
-
-        .table th {
-            background-color: #4B6A88;
-            color: #f8f8ff;
-        }
-
-        .table-container table th,
-        .table-container table td {
-            padding: 12px;
-        }
-    </style>
 </head>
 
 <body>
@@ -66,14 +36,14 @@ include 'koneksi.php';
             <h1>Inbox</h1>
         </div>
 
-        <div class="container mt-5 table-container">
-            <table class="table table-bordered">
+        <div class="table-responsive container mt-5">
+            <table class="table table-striped table-bordered table-hover">
                 <thead class="table">
                     <tr>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>WhatsApp</th>
-                        <th>Comment</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">WhatsApp</th>
+                        <th scope="col">Comment</th>
                     </tr>
                 </thead>
                 <tbody>

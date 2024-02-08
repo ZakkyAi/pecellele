@@ -67,7 +67,7 @@ include 'koneksi.php';
             echo "</div>";
         }
     } else {
-        echo "<p class='lead'>0 results</p>";
+        echo "<p class='lead'> Tidak Ada pesanan</p>";
     }
 
     $conn->close();
