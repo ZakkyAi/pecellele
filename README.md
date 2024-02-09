@@ -6,3 +6,4 @@ pertama adalah Admin = Orang yang bisa menambah maupun mengubah tipe user lain
 Kedua adalah Penjual = Orang yang bisa melakukan CRUD pada online shop ini. Dan melakukan traksaksi dengan pembeli
 Ketiga adalah Pembeli = Orang yang bisa melakukan pembelian terhadap toko ini.
 
+Itu saja yak
