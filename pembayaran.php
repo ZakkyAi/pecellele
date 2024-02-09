@@ -8,8 +8,20 @@ include 'koneksi.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
     <style>
         .mySlides {display:none;}
+
+        .mySlides {display:none;}
+    /* Limit maximum width and height of images */
+    .card-img-top {
+        max-width: 100%;
+        max-height: 200px; /* Adjust the maximum height as needed */
+        object-fit: cover;
+    }
     </style>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -62,7 +74,7 @@ include 'koneksi.php';
 
             // Display image from the "gambar" folder
             $gambarPath = "gambar/" . $row["gambar"];
-            echo "<p class='card-text'>Gambar: <img src='$gambarPath' alt='gambar' class='img-fluid'></p>";
+            echo "<p class='card-text'>Bukti Pembayaran: <img src='$gambarPath' alt='gambar' class='card-img-top'></p>";
 
             echo "</div>";
             echo "</div>";

@@ -52,6 +52,10 @@ $result = $conn->query($sql);
                             <th scope="col">Jumlah</th>
                             <th scope="col">Harga</th>
                             <th scope="col">Status Pesanan</th>
+                            <th scope="col">aksi</th>
+                            <th scope="col">Nama Pemesan</th>
+
+
                         </tr>
                     </thead>
                     <tbody>
@@ -65,6 +69,7 @@ $result = $conn->query($sql);
                                 echo "<td>" . $row["nama_makanan"] . "</td>";
                                 echo "<td>" . $row["Jumlah"] . "</td>";
                                 echo "<td>" . $row["harga"] . "</td>";
+                                
                                 echo "<td>
                                     <select name='status_pesanan[]'>";
                                     
@@ -77,6 +82,9 @@ $result = $conn->query($sql);
 
                                 echo "</select>
                                 </td>";
+                                echo "<td>
+                                <a href='delete_keranjangpenjual.php?id=" . $row["id_produk"] . "' class='btn btn-danger' onclick=\"return confirm('Yakin ingin menghapus pesanan ini?')\">Delete</a>
+                              </td>";
                                 echo "<input type='hidden' name='id_produk[]' value='" . $row["id_produk"] . "'>";
                                 echo "</tr>";
                                 $count++;
