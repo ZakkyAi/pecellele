@@ -2,6 +2,27 @@
 // Include the database connection file
 include 'koneksi.php';
 
+session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['user_id'])) {
+    // Fetch the user's data from the database
+    $user_id = $_SESSION['user_id'];
+    $user_query = "SELECT namauser FROM tbuser WHERE id = $user_id";
+    $user_result = $conn->query($user_query);
+
+    if ($user_result->num_rows > 0) {
+        $user_row = $user_result->fetch_assoc();
+        $namauser = htmlspecialchars($user_row['namauser']);
+    } else {
+        $namauser = "Guest"; // Default if user not found
+    }
+} else {
+    // Redirect to the login page if the user is not logged in
+    header("Location: form_login.php");
+    exit();
+}
+
 // Retrieve data from the "pesanan" table with a join to "tbproduk"
 $sql = "SELECT pesanan.*, tbproduk.nama AS nama_makanan
         FROM pesanan
@@ -25,27 +46,33 @@ $result = $conn->query($sql);
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <!-- Replace "Family Feast" with your logo -->
-        <a class="navbar-brand" href="#"><img src="gambar/lele.png" alt="Your Logo" height="50px"></a>
+        <a class="navbar-brand" href="homepembeli.php"><img src="gambar/lele.png" alt="Your Logo" height="50px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ms-auto"> <!-- Use ms-auto to push the items to the right -->
                 <li class="nav-item">
                     <a class="nav-link active" href="homepembeli.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="homepembeli.php">Menu</a>
+                    <a class="nav-link" href="homepembeli.php#menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="homepembeli.php">Contact</a>
+                    <a class="nav-link" href="homepembeli.php#contact">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="keranjangpembeli.php">Keranjang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php">logout</a>
+                    <a class="nav-link" href="statuspembeli.php">status</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>
+                <li class="nav-item">
+            <a class="nav-link active" href="#"><?php echo $namauser; ?></a>
+                 </li>
             </ul>
         </div>
     </div>

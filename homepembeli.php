@@ -19,7 +19,7 @@ if (isset($_SESSION['user_id'])) {
     }
 } else {
     // Redirect to the login page if the user is not logged in
-    header("Location: login.php");
+    header("Location: form_login.php");
     exit();
 }
 ?>
@@ -93,17 +93,17 @@ if (isset($_SESSION['user_id'])) {
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
         <!-- Replace "Family Feast" with your logo -->
-        <a class="navbar-brand" href="#"><img src="gambar/lele.png" alt="Your Logo" height="50px"></a>
+        <a class="navbar-brand" href="homepembeli.php"><img src="gambar/lele.png" alt="Your Logo" height="50px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto"> <!-- Use ms-auto to push the items to the right -->
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="homepembeli.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#menu">Menu</a>

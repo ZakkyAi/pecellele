@@ -44,17 +44,37 @@ include 'koneksi.php';
         include 'koneksi.php';
 
         // Your SQL query to retrieve data goes here
-        $sql = "SELECT * FROM bayar";
+        $sql = "SELECT * FROM log";
         $result = $conn->query($sql);
 
         // Display the data in a table
         if ($result->num_rows > 0) {
             echo "<table class='table'>";
-            echo "<thead><tr><th>ID</th><th>Nama Pembayar</th><th>Alamat</th><th>Yang Dipesan</th><th>Jumlah Bayar</th></tr></thead><tbody>";
+            echo "<thead>\n";
+            echo "    <tr>\n";
+            echo "        <th>ID</th>\n";
+            echo "        <th>Nama Pembayar</th>\n";
+            echo "        <th>Alamat</th>\n";
+            echo "        <th>Yang Dipesan</th>\n";
+            echo "        <th>Jumlah Bayar</th>\n";
+            echo "        <th>Status</th>\n"; 
+            echo "    </tr>\n";
+            echo "</thead>\n";
+            echo "<tbody>\n";
+            // Your table body content goes here
+            echo "</tbody>";
 
             while ($row = $result->fetch_assoc()) {
-                echo "<tr><td>{$row['id_pembayar']}</td><td>{$row['nama_pembayar']}</td><td>{$row['alamat']}</td><td>{$row['ygdipesan']}</td><td>{$row['jumlah_bayar']}</td></tr>";
+                echo "<tr>\n";
+                echo "    <td>{$row['id_pembayar']}</td>\n";
+                echo "    <td>{$row['nama_pembayar']}</td>\n";
+                echo "    <td>{$row['alamat']}</td>\n";
+                echo "    <td>{$row['ygdipesan']}</td>\n";
+                echo "    <td>{$row['jumlah_bayar']}</td>\n";
+                echo "    <td>{$row['status']}</td>\n";
+                echo "</tr>\n";
             }
+            
 
             echo "</tbody></table>";
         } else {
