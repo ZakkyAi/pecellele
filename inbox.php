@@ -40,10 +40,12 @@ include 'koneksi.php';
             <table class="table table-striped table-bordered table-hover">
                 <thead class="table">
                     <tr>
+                        <th scope="col">No</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Email</th>
                         <th scope="col">WhatsApp</th>
                         <th scope="col">Comment</th>
+                        <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,17 +58,22 @@ include 'koneksi.php';
                     $sql = "SELECT * FROM tbkomen";
                     $result = $conn->query($sql);
 
+                    $no = 1; // Initialize variable for numbering
+
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo "<tr>";
+                            echo "<td>".$no."</td>"; // Display the number
                             echo "<td>" . $row['nama'] . "</td>";
                             echo "<td>" . $row['email'] . "</td>";
                             echo "<td>" . $row['wa'] . "</td>";
                             echo "<td>" . $row['komen'] . "</td>";
+                            echo "<td><a href='proses_delete_inbox.php?id=" . $row['id'] . "' class='btn btn-danger' onclick='return confirm(\"Are you sure you want to delete this item?\")'>Delete</a></td>";
                             echo "</tr>";
+                            $no++; // Increment the number
                         }
                     } else {
-                        echo "<tr><td colspan='4'>No data found</td></tr>";
+                        echo "<tr><td colspan='6' style='text-align: center;'>No data found</td></tr>";
                     }
 
                     // Close connection

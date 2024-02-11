@@ -95,7 +95,7 @@ $result = $conn->query($sql);
                         ?>
                     </tbody>
                 </table>
-                <button type="submit" class="btn btn-primary">Update Status</button>
+                <!-- <button type="submit" class="btn btn-primary">Update Status</button> -->
             </form>
         </div>
     </div>
