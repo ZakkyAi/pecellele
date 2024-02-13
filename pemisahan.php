@@ -3,16 +3,20 @@ session_start();
 
 include 'koneksi.php';
 
-
-
 // Check if 'level' key is set in the session
 if (isset($_SESSION['level'])) {
     $level = $_SESSION['level'];
 
-    if ($level == 'admin') {
+    if ($level == 'penjual') {
         // Jika sudah diarahkan ke home.php, biarkan pengguna di sana
         if (basename($_SERVER['PHP_SELF']) !== 'home.php') {
             header('Location: home.php');
+            exit;
+        }
+    } elseif ($level == 'admin') {
+        // Jika sudah diarahkan ke homeadmin.php, biarkan pengguna di sana
+        if (basename($_SERVER['PHP_SELF']) !== 'homeadmin.php') {
+            header('Location: homeadmin.php');
             exit;
         }
     } elseif ($level == 'pembeli') {

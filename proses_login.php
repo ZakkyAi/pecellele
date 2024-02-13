@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
         // Adjusting the session level based on your database structure
         if ($user['level'] == "admin") {
             $_SESSION['level'] = "admin";
-            header("Location: home.php");
+            header("Location: homeadmin.php");
             exit();
         } elseif ($user['level'] == "penjual") {
             $_SESSION['level'] = "penjual";
