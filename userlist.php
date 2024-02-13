@@ -62,6 +62,7 @@
         <li><a href="homeadmin.php"><img src="gambar/lele.png" alt="" width="150px"></a></li>
         <li><a href="homeadmin.php">Home</a></li>
         <li><a href="userlist.php">Userlist</a></li>
+        <li><a href="logout.php">log out</a></li>
     </ul>
 </div>
 
@@ -74,7 +75,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>User Name</th>
+                    <th>NamaUser</th>
                     <th>Level</th>
                     <th>Action</th> <!-- Added column for action buttons -->
                 </tr>
@@ -95,7 +96,10 @@
                                 <td>".$row["email"]."</td>
                                 <td>".$row["namauser"]."</td>
                                 <td>".$row["level"]."</td>
-                                <td><a href='edit_userlist.php?id=".$row["id"]."' class='btn btn-primary'>Edit</a></td>
+                                <td>
+                                    <a href='edit_userlist.php?id=".$row["id"]."' class='btn btn-primary'>Edit</a>
+                                    <a href='delete_userlist.php?id=".$row["id"]."' class='btn btn-danger'>Delete</a>
+                                </td>
                             </tr>";
                     }
                 } else {

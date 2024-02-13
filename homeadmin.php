@@ -45,6 +45,7 @@
     <li><a href="homeadmin.php"><img src="gambar/lele.png" alt="" width="150px"></a></li>
     <li><a href="homeadmin.php">Home</a></li>
     <li><a href="userlist.php">Userlist</a></li>
+    <li><a href="logout.php">Log out</a></li>
 
   </ul>
 </div>

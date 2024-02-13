@@ -47,8 +47,8 @@
                         <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>">
                     </div>
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" value="<?php echo $row['namauser']; ?>">
+                        <label for="namauser" class="form-label">Nama User</label>
+                        <input type="text" class="form-control" id="namauser" name="namauser" value="<?php echo $row['namauser']; ?>  " readonly>
                     </div>
                     <div class="mb-3">
                         <label for="level" class="form-label">Level</label>

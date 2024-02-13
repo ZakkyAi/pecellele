@@ -2,12 +2,12 @@
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if all required fields are filled
-    if (isset($_POST['id']) && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['level'])) {
+    if (isset($_POST['id']) && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['namauser']) && isset($_POST['level'])) {
         // Get form data
         $id = $_POST['id'];
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $username = $_POST['username'];
+        $username = $_POST['namauser']; // Corrected the field name here
         $level = $_POST['level'];
 
         // Include database connection file
