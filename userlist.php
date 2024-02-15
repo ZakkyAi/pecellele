@@ -9,7 +9,6 @@
         /* Custom styles */
         body {
             font-family: Arial, sans-serif;
-            margin-top: 20px;
         }
         #sidebar {
             position: fixed;
@@ -53,6 +52,9 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        #sidebar ul.list-unstyled li {
+    font-size: 20px;
+  }
     </style>
 </head>
 <body>
@@ -62,13 +64,16 @@
         <li><a href="homeadmin.php"><img src="gambar/lele.png" alt="" width="150px"></a></li>
         <li><a href="homeadmin.php">Home</a></li>
         <li><a href="userlist.php">Userlist</a></li>
-        <li><a href="logout.php">log out</a></li>
+        <li><a href="tambah_userlist.php">Tambah User</a></li>
+        <li><a href="logout.php">Log out</a></li>
     </ul>
 </div>
 
 <div id="content">
     <div class="container">
         <h1>User List</h1>
+        <div class="mb-4">
+                <a href="tambah_userlist.php" class="btn btn-success mb-3">Tambah Produk</a>
         <table class="table table-striped table-bordered">
             <thead class="table-dark">
                 <tr>
@@ -98,10 +103,11 @@
                                 <td>".$row["level"]."</td>
                                 <td>
                                     <a href='edit_userlist.php?id=".$row["id"]."' class='btn btn-primary'>Edit</a>
-                                    <a href='delete_userlist.php?id=".$row["id"]."' class='btn btn-danger'>Delete</a>
+                                    <a href='delete_userlist.php?id=".$row["id"]."' class='btn btn-danger' onclick=\"return confirm('Yakin ingin menghapus produk ini?')\">Delete</a>
                                 </td>
                             </tr>";
                     }
+                    
                 } else {
                     echo "<tr><td colspan='6'>No users found</td></tr>";
                 }

@@ -36,15 +36,19 @@
       margin-left: 250px;
       padding: 20px;
     }
+    #sidebar ul.list-unstyled li {
+    font-size: 20px;
+  }
   </style>
 </head>
-<body>
+<body>  
 
 <div id="sidebar">
   <ul class="list-unstyled">
     <li><a href="homeadmin.php"><img src="gambar/lele.png" alt="" width="150px"></a></li>
     <li><a href="homeadmin.php">Home</a></li>
     <li><a href="userlist.php">Userlist</a></li>
+    <li><a href="tambah_userlist.php">Tambah User</a></li>
     <li><a href="logout.php">Log out</a></li>
 
   </ul>
