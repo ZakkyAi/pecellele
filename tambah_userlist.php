@@ -15,12 +15,52 @@
             width: 50%;
             margin: 0 auto;
         }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 250px;
+            padding: 20px;
+            background-color: #343a40; /* Dark gray */
+            border-right: 1px solid #212529; /* Darker gray */
+            color: #fff; /* White */
+        }
+        #sidebar h3,
+        #sidebar ul {
+            color: #fff; /* White */
+            list-style: none;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            color: #fff; /* White */
+            text-decoration: none;
+        }
+        #sidebar ul li a:hover {
+            color: #ffc107; /* Yellow */
+        }
     </style>
 </head>
 <body>
 
+<div id="sidebar">
+    <ul class="list-unstyled" style="font-size: 20px;">
+        <li><a href="homeadmin.php"><img src="gambar/lele.png" alt="" width="150px"></a></li>
+        <li><a href="homeadmin.php">Home</a></li>
+        <li><a href="userlist.php">Userlist</a></li>
+        <li><a href="tambah_userlist.php">Tambah User</a></li>
+        <li><a href="logout.php">Log out</a></li>
+    </ul>
+</div>
+
+
 <div class="container">
-    <h1>Add New User</h1>
+    <div style="margin: 0 0 40px 25%;">
+        <h1>Add New User</h1>
+    </div>
     <form action="process_tambah_user.php" method="POST">
         <div class="mb-3">
             <label for="nama" class="form-label">Name:</label>

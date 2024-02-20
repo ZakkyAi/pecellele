@@ -17,10 +17,16 @@ if (isset($_GET['id'])) {
         // Attempt to execute the prepared statement
         if ($stmt->execute()) {
             // Redirect to userlist.php
-            header("location: userlist.php");
+            echo "<script language='javascript'>
+            alert('User has been deleted successfully');
+            window.location.href = 'userlist.php';
+            </script>";
             exit();
         } else {
-            echo "Oops! Something went wrong. Please try again later.";
+            echo "<script language='javascript'>
+            alert('Oops! Something went wrong. Please try again later.');
+            window.location.href = 'userlist.php';
+            </script>";
         }
 
         // Close statement

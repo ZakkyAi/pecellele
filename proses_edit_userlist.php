@@ -21,7 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Execute the statement
         if ($stmt->execute()) {
             // Redirect back to userlist.php with success message
-            header("location: userlist.php?success=1");
+            echo "<script language='javascript'>
+            alert('Data user berhasil diperbarui');
+            window.location.href='userlist.php?success=1';
+            </script>";
             exit();
         } else {
             // Redirect back to edit_userlist.php with error message
